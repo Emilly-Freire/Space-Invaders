@@ -1,0 +1,7 @@
+* {
+    background-image: url(../img/background.png);
+}
+
+.itens img {
+    height: 70px;
+}
