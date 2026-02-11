@@ -1,4 +1,5 @@
 let val = 0;
+let btn = document.querySelector("#btn");
 let id;
 
 function add() {
@@ -9,3 +10,5 @@ function add() {
 function startCounter() {
     id = setInterval(add, 1000);
 }
+
+btn.addEventListener("click", startCounter);
