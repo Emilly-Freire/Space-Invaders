@@ -9,18 +9,29 @@
 </head>
 <body>
     <div class="itens">
-        <div>
+        <div onload="startCounter()">
             <img src="./img/clock.png" alt="clock">
+            <h2 id="v">00:00:00</h2>
         </div>
         <div>
             <img src="./img/nave.png" alt="nave">
+            <h2>LIFE: 3</h2>
         </div>
         <div>
             <img src="./img/alien.png" alt="alien">
+            <h2>ALIEN: 0</h2>
         </div>
     </div>
 
-    
+    <div id="nave">
+        <img src="./img/nave.png" alt="nave">
+    </div>
+<!--
+
+
+    <div id="missil">
+        <img src="./img/missil.png" alt="missil">
+    </div>-->
     <script src="./js/script.js"></script>
 </body>
 </html>
