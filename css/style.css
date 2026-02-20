@@ -14,14 +14,15 @@ body {
 }
 
 #nave {
-    display: flex;
-    justify-content: center;
-    padding-top: 750px;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
 }
 
 #nave img {
     height: 150px;
 }
+
 
 /*
 #missil {
