@@ -2,6 +2,21 @@ let hora = 0;
 let minuto = 0;
 let segundo = 0;
 let id;
+let posicao = 0;
+let img = document.getElementById("nave");
+
+document.addEventListener("keydown", function(evento) {
+    if(evento.key === "ArrowRight") {
+        posicao += 10;
+    } 
+
+    if(evento.key === "ArrowLeft") {
+        posicao -=10;
+    }
+
+    img.style.transform = `translateX(${posicao}px)`;
+});
+
 
 function tempo() {
     let h = hora < 10 ? "0" + hora : hora;

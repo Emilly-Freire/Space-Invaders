@@ -2,14 +2,14 @@ body {
     background-image: url(../img/background.png);
 }
 
-.itens {
+#caixa {
     position: absolute;
     background-color: black;
     color: #ffff;
     text-align: center;
 }
 
-.itens img {
+#caixa img {
     height: 70px;
 }
 
@@ -17,11 +17,10 @@ body {
     position: absolute;
     bottom: 10px;
     left: 50%;
-}
-
-#nave img {
+    transform: translateX(-50%);
     height: 150px;
 }
+
 
 
 /*
