@@ -3,19 +3,31 @@ let minuto = 0;
 let segundo = 0;
 let id;
 let posicao = 0;
-let img = document.getElementById("nave");
+let posicaoMissil = 0;
+let img1 = document.getElementById("nave");
+let img2 = document.getElementById("missil");
+let img3 = document.getElementById("missil2");
 
 //movimento da nave
 document.addEventListener("keydown", function(evento) {
-    if(evento.key === "ArrowRight") {
+    if(evento.key === "ArrowRight" || evento.key === "d") {
         posicao += 10;
     } 
 
-    if(evento.key === "ArrowLeft") {
+    if(evento.key === "ArrowLeft" || evento.key === "a") {
         posicao -= 10;
     }
 
-    img.style.transform = `translateX(${posicao}px)`;
+    img1.style.transform = `translateX(${posicao}px)`;
+    img2.style.transform = `translateX(${posicao}px)`;
+    img3.style.transform = `translateX(${posicao}px)`;
+});
+
+//atirar misseis
+document.addEventListener("keydown", function(atira) {
+    if(atira.key === " ") {
+        posicaoMissil 
+    }
 });
 
 //temporizador
@@ -47,12 +59,18 @@ function comecaContar() {
     id = setInterval(add, 1000);
 }
 
-
-btn.addEventListener("click", startCounter);
-
 //pausar
 document.addEventListener("keydown", function(pare) {
     if(pare.key === "Escape") {
         clearInterval(id);
     }
 });
+
+//continuar
+document.addEventListener("keydown", function(continua) {
+    if(continua.key === "p") {
+        comecaContar();
+    }
+});
+
+btn.addEventListener("click", startCounter);
