@@ -7,35 +7,50 @@ let posicaoMissil = 0;
 let img1 = document.getElementById("nave");
 let img2 = document.getElementById("missil");
 let img3 = document.getElementById("missil2");
+let atirando = false;
+let intervaloTiro = null;
+let numero = 1;
 
 //movimento da nave
 document.addEventListener("keydown", function(evento) {
-    if(evento.key === "ArrowRight" || evento.key === "d") {
-        posicao += 10;
-    } 
-
-    if(evento.key === "ArrowLeft" || evento.key === "a") {
+    if((evento.key === "ArrowLeft" || evento.key === "a") && posicao > -980) {
         posicao -= 10;
+        console.log(posicao);
+    }else if((evento.key === "ArrowRight" || evento.key === "d") && posicao < 860) {
+        posicao += 10;
     }
 
     img1.style.transform = `translateX(${posicao}px)`;
     img2.style.transform = `translateX(${posicao}px)`;
     img3.style.transform = `translateX(${posicao}px)`;
+
 });
 
 //atirar misseis
 document.addEventListener("keydown", function(atira) {
-    if(atira.key === " ") {
+    
+    if(atira.key === " " && !atirando) {
+        atirando = true;
         posicaoMissil = 0;
 
-        let tiro = setInterval(function() {
-            posicaoMissil -= 10;
-            img2.style.transform = `translate(${posicao}px, ${posicaoMissil}px)`;
+        intervaloTiro = setInterval(function() {
+            posicaoMissil -= 6;
 
-            if() {
-                
+            if(numero === 1) {
+                img2.style.transform = `translate(${posicao}px, ${posicaoMissil}px)`;
+            } else {
+                img3.style.transform = `translate(${posicao}px, ${posicaoMissil}px)`;
             }
-        });
+
+            if(posicaoMissil < -850) {
+                clearInterval(intervaloTiro);
+                atirando = false;
+
+                numero = (numero === 1) ? 2 : 1;
+            }
+        })
+        
+
     }
 });
 

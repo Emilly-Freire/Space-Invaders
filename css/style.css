@@ -22,7 +22,6 @@ body {
     position: absolute;
     bottom: 10px;
     left: 50%;
-    transform: translateX(0);
     height: 150px;
 
     z-index: 6;
@@ -34,7 +33,6 @@ body {
     left: 50.5%;
     transform: translateX(0);
     height: 90px;
-    transform: translateY(0);
 
     z-index: 5;
 }
@@ -42,10 +40,9 @@ body {
 #missil2 {
     position: absolute;
     bottom: 40px;
-    left: 54.4%;
+    left: 53%;
     transform: translateX(0);
     height: 90px;
-    transform: translateY(0);
 
     z-index: 4;
 }
