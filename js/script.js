@@ -26,7 +26,16 @@ document.addEventListener("keydown", function(evento) {
 //atirar misseis
 document.addEventListener("keydown", function(atira) {
     if(atira.key === " ") {
-        posicaoMissil 
+        posicaoMissil = 0;
+
+        let tiro = setInterval(function() {
+            posicaoMissil -= 10;
+            img2.style.transform = `translate(${posicao}px, ${posicaoMissil}px)`;
+
+            if() {
+                
+            }
+        });
     }
 });
 
